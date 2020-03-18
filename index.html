@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css" />
+
+    <title>Coronavirus Update (Live)</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4"><i class="fa fa-question-circle" aria-hidden="true"></i> Coronavirus Information</h1>
+        <p class="lead">Get the latest update for Global Coronavirus Information. <br /></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="global" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Global</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="bycountry" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">By Country</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="global">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card text-white bg-warning mb-3 mt-3">
+                    <div class="card-header"><h2>Cases</h2></div>
+                    <div class="card-body">
+                      <h3 id="cases" class="card-text"></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card text-white bg-danger mb-3 mt-3">
+                    <div class="card-header"><h2>Deaths</h2></div>
+                    <div class="card-body">
+                      <h3 id="deaths" class="card-text"></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card text-white bg-success mb-3 mt-3">
+                    <div class="card-header"><h2>Recovered</h2></div>
+                    <div class="card-body">
+                      <h3 id="recovered" class="card-text"></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="profile" role="tabpanel" aria-labelledby="bycountry">
+              <table id="datatables" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Country</th>
+                    <th>Cases</th>
+                    <th>Today Cases</th>
+                    <th>Deaths</th>
+                    <th>Today Deaths</th>
+                    <th>Recovered</th>
+                    <th>Active</th>
+                    <th>Critical</th>
+                  </tr>
+                </thead>
+                <tbody id="countries"></tbody>
+              </table>
+            </div>
+          </div>
+          <footer class="bg-default text-dark text-center" style="margin:0">
+            <p class="mb-0 pt-4 pb-4" style="margin:0">© 2020 <a href="http://shidqi.github.io">Nauval S</a></p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
