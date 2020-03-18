@@ -35,6 +35,6 @@ $(document).ready(function() {
       })
       .join("");
     $("#countries").html(dataHandler);
-    $("#datatables").DataTable();
+    $("#datatables").DataTable({ responsive: true });
   })();
 });
