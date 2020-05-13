@@ -11,7 +11,7 @@ $(document).ready(function () {
 
   (async () => {
     const data = await getAllData();
-    console.log(data);
+
     $('#cases').text(data.cases.toLocaleString());
     $('#deaths').text(data.deaths.toLocaleString());
     $('#recovered').text(data.recovered.toLocaleString());
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   (async () => {
     const data = await getCountries();
-    console.log(data);
+
     let no = 1;
     $('#datatables').DataTable({
       data: data,
@@ -31,10 +31,30 @@ $(document).ready(function () {
           },
         },
         { data: 'country' },
-        { data: 'cases' },
-        { data: 'deaths' },
-        { data: 'todayCases' },
-        { data: 'todayDeaths' },
+        {
+          data: 'cases',
+          render: function (data) {
+            return data.toLocaleString();
+          },
+        },
+        {
+          data: 'todayCases',
+          render: function (data) {
+            return data.toLocaleString();
+          },
+        },
+        {
+          data: 'deaths',
+          render: function (data) {
+            return data.toLocaleString();
+          },
+        },
+        {
+          data: 'todayDeaths',
+          render: function (data) {
+            return data.toLocaleString();
+          },
+        },
         { data: 'recovered' },
         { data: 'active' },
         { data: 'critical' },
